@@ -5,9 +5,25 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <title>Jones Portfolio</title>
+        <title>Jones' Portfolio</title>
     </head>
-    <body> 
+    <body>
+        <header class="navbar">
+            <div class="navbar-start">
+                <h1 class="navbar-header">
+                    Personal Portfolio
+                </h1>
+                <div class="navbarButtons">
+                    <a class="navlink" href="{{ url_for('index') }}">index</a>
+                    <a class="navlink" href="{{ url_for('about') }}">about</a>
+                    <a class="navlink" href="{{ url_for('contact') }}">contact</a>
+                </div>
+            </div>
+            <div class="navbarButtons">
+                <a class="navlink" href="https://www.github.com/XordK">github</a>
+                <a class="navlink" href="https://www.google.com">discord</a>
+            </div>
+        </header>
         <!-- Body content is loaded from the other html files -->
         {% block content %}{% endblock %}
     </body> 
